@@ -97,6 +97,7 @@ def normalize(cell_block):
         line = lines.pop(0)
 
         if line.startswith('Quality'):
+            cell.signal = 0
             for re_name, quality_re in quality_re_dict.items():
                 match_result = quality_re.search(line)
                 if match_result is not None:
